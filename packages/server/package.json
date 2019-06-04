@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec 'babel-node --ignore 'node_modules' --root-mode upward ./src/app.js'",
+    "build": "babel src --out-dir dist --root-mode upward --ignore **/*.story.js,**/*.spec.js",
+    "debug": "DEBUG=server:* npm start",
+    "some:script": "babel-node --root-mode upward --ignore 'node_modules' --presets @babel/env ./src/scripts/script1.js",
+    "test": "mocha --require registerbabel7.js 'src/**/**spec.js'"
+  },
+  "dependencies": {
+    "@yourproject/common": "^0.0.0",
+    "cookie-parser": "~1.4.4",
+    "core-js": "^3.1.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1"
+  }
+}
