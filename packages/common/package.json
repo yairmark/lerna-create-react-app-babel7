@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "yairmark <28291977+yairmark@users.noreply.github.com>",
   "license": "ISC",
-  "main": "lib/common.js",
+  "main": "src/util/common.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
